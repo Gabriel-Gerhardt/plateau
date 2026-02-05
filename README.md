@@ -7,6 +7,22 @@
 <Specified project description>
 
 
+## Plateau instance
+
+### Annotations:
+
+@Instance: create a instance of a class and put it in memory, allow more than 1 instance
+Allows personalized constructor parameters
+
+@SingletonInstance: create a singleton instance and put it in memory, doesn`t allow any more instances and uses memory data
+
+
+## Plateau memory
+
+### Classes
+InstanceManager - class that controls any instance in memory of the application
+
+
 ## Diagram
 
 <Project C4 or sequencial diagram>
