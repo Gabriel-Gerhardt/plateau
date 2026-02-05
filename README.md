@@ -7,7 +7,7 @@
 <Specified project description>
 
 
-## Plateau instance
+## Plateau Instance
 
 ### Annotations:
 
@@ -17,7 +17,7 @@ Allows personalized constructor parameters
 @SingletonInstance: create a singleton instance and put it in memory, doesn`t allow any more instances and uses memory data
 
 
-## Plateau memory
+## Plateau Memory
 
 ### Classes
 InstanceManager - class that controls any instance in memory of the application
