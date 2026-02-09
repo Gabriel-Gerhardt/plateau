@@ -3,10 +3,26 @@
  */
 package org.example.app;
 
-import static org.example.app.MessageUtils.getMessage;
+import java.lang.reflect.Field;
+import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(getMessage());
+        printOneClassInfo(Dragonfly.class);
+    }
+
+    private static void printOneClassInfo(Class<?> cl){
+        System.out.println(cl.getSimpleName());
+        for (Field field : cl.getFields()){
+            System.out.println(field.getName());
+        }
+    }
+
+    private static class Dragonfly{
+        public int size;
+        public boolean isAlive;
+        public Dragonfly(){
+        }
     }
 }

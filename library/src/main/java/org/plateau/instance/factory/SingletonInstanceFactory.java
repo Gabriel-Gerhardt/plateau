@@ -5,16 +5,16 @@ import java.lang.reflect.InvocationTargetException;
 public class SingletonInstanceFactory {
     private SingletonInstanceFactory(){
     }
-    private static Object createSingletonInstance(String module){
+    private static Object createSingletonInstance(Class<?> instance){
         try {
-            Class<?> instance = Class.forName(module);
+
             return instance.getDeclaredConstructor().newInstance();
-        } catch (ClassNotFoundException | InvocationTargetException | InstantiationException | IllegalAccessException |
+        } catch (InvocationTargetException | InstantiationException | IllegalAccessException |
                  NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }
-    public static Object getInstance(String module){
-        return createSingletonInstance(module);
+    public static Object getInstance(Class<?> instance){
+        return createSingletonInstance(instance);
     }
 }
