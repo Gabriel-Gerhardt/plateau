@@ -1,6 +1,6 @@
 package org.example.app.test;
 
-public class Dragonfly{
+public class Dragonfly implements IDragonfly{
     public int size;
     public boolean isAlive;
     public Dragonfly(){
