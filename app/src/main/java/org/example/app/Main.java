@@ -3,26 +3,27 @@
  */
 package org.example.app;
 
+import org.example.app.test.Dragonfly;
+import org.plateau.instance.factory.SingletonInstanceFactory;
+
 import java.lang.reflect.Field;
-import java.util.Arrays;
 
 
 public class Main {
     public static void main(String[] args) {
-        printOneClassInfo(Dragonfly.class);
+        SingletonInstanceFactory factory = new SingletonInstanceFactory();
+        Object fly = factory.getInstance(Dragonfly.class);
+
+        printOneClassInfo(fly.getClass());
     }
 
     private static void printOneClassInfo(Class<?> cl){
+
         System.out.println(cl.getSimpleName());
         for (Field field : cl.getFields()){
             System.out.println(field.getName());
         }
     }
 
-    private static class Dragonfly{
-        public int size;
-        public boolean isAlive;
-        public Dragonfly(){
-        }
-    }
+
 }
